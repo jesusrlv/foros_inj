@@ -175,7 +175,7 @@
                 <div class="col-sm-6">
                   <label for="firstName" class="form-label">Municipio</label>
                   
-                  <select class="form-select" aria-label="Default select example">
+                  <select class="form-select" aria-label="Default select example" id="municipio">
                     <option selected>Selecciona ...</option>
                     <?php
                         include('query/municipio.php');
@@ -193,6 +193,19 @@
                     Valid last name is required.
                   </div>
                 </div>
+    
+                <div class="col-sm-12">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="checkExtranjero" onclick="EnableDisabled()">
+                        <label class="form-check-label mb-1" for="flexCheckDefault">
+                            ¿Resides en el extranjero?
+                        </label>
+                    </div>
+                    <input type="text" class="form-control" id="extranjero" placeholder="Lugar de residencia" value="" disabled>
+                    <div class="invalid-feedback">
+                        Valid last name is required.
+                    </div>
+                </div>
              
           </div>
           <div class="col-md-12 col-lg-12">
@@ -202,9 +215,9 @@
               <div class="col-sm-12">
                 <div class="input-group">
                   <span class="input-group-text">Propuesta</span>
-                  <textarea class="form-control" aria-label="With textarea" rows="4" style="resize:none;" id="contEducacion"></textarea>
+                  <textarea class="form-control" aria-label="With textarea" rows="4" style="resize:none;" id="contEducacion" onkeypress="validacionCaracteres(this)" onkeydown="validacionCaracteres(this);" data-max=30></textarea>
                 </div>
-                <small class="text-muted">Cantidad de caracteres: <span id="caracteres"></span></small>
+                <small class="text-muted">Cantidad de caracteres: <span id="caracteresMed">30</span></small>
               </div>
             </div>
           </div>

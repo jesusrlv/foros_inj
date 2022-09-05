@@ -8,12 +8,24 @@
 
 // function validacionCaracteres(){
 //     var MaxLength = 10;
-//     var caracteres = document.getElementById("validacionCaracteres").value.length;
-//     alert("validacionCaracteres");
+//     var caracteres = document.getElementById("contEducacion").value.length;
+//     alert("contEducacion");
 //     if(MaxLength > caracteres){
-//         document.getElementById("caracteresVal").innerHTML="<p style='color:red'>the max length of "+Max_Length + " characters is reached, you typed in  " + length + "characters</p>";
+//         document.getElementById("caracteresMed").innerHTML="the max length of "+Max_Length + " characters is reached, you typed in  " + length + "characters";
 //     }
 // }
+
+function validacionCaracteres(obj){
+    var strLength = obj.value.length;
+    var maxLength = obj.dataset.max;
+    var charRemain = (maxLength - strLength);
+
+    if(charRemain < 0){
+        document.getElementById("caracteresMed").innerHTML = 'Has excedido el límite de '+maxLength+' caracteres';
+    }else{
+        document.getElementById("caracteresMed").innerHTML = charRemain+' restantes';
+    }
+}
 
 // $('#mensaje_ayuda').text('20 carácteres restantes');
 //   $('#validacionCaracteres').keydown(function () {
@@ -36,14 +48,34 @@
 //       }
 //   });  
 
-$("#contEducacion").on('keypress', function() {
-    var limit = 30;
-    $("#contEducacion").attr('maxlength', limit);
-    var init = $(this).val().length;
+
+
+
+// $("#contEducacion").on('input', function() {
+//     var limit = 30;
+//     $("#contEducacion").attr('maxlength', limit);
+//     var init = $(this).val().length;
     
-    if(init<limit){
-      init++;
-      $('#caracteres').text("Máximo 30 caracteres:" + init); 
+//     if(init<limit){
+//       init++;
+//       $('#caracteres').text("Máximo 30 caracteres:" + init); 
+//     }
+    
+//   });
+
+//   Bloqueo de residencia
+
+  function EnableDisabled(){
+    checkBox = document.getElementById("checkExtranjero");
+    
+    if(checkBox.checked == true){
+        document.getElementById("extranjero").disabled = false;
+        document.getElementById("municipio").disabled = true;
+
     }
-    
-  });
+    else if(checkBox.checked == false){
+        document.getElementById("extranjero").disabled = true;
+        document.getElementById("municipio").disabled = false;
+
+    }
+  }
