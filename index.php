@@ -215,7 +215,7 @@
               <div class="col-sm-12">
                 <div class="input-group">
                   <span class="input-group-text">Propuesta</span>
-                  <textarea class="form-control" aria-label="With textarea" rows="4" style="resize:none;" id="contEducacion" onkeypress="validacioncaracteres();" data-max=30></textarea>
+                  <textarea class="form-control" aria-label="With textarea" rows="4" style="resize:none;" id="contEducacion" onkeypress="validacioncaracteres();" onkeydown="validacioncaracteres();" data-max=30></textarea>
                 </div>
                 <small class="text-muted">Cantidad de caracteres: <span id="caracteresMed">30</span></small>
               </div>
@@ -231,7 +231,7 @@
               <div class="col-sm-12">
                 <div class="input-group">
                   <span class="input-group-text">Propuesta</span>
-                  <textarea class="form-control" aria-label="With textarea" rows="4" style="resize:none;" id="validacionCaracteres"></textarea>
+                  <textarea class="form-control" aria-label="With textarea" rows="4" style="resize:none;" id="contSalud" onkeypress="validacioncaracteresSalud();" onkeydown="validacioncaracteresSalud();"></textarea>
                     
                 </div>
                 <small class="text-muted">Cantidad de caracteres: <span id="contador_salud"></span></small>
@@ -246,9 +246,9 @@
               <div class="col-sm-12">
                 <div class="input-group">
                   <span class="input-group-text">Propuesta</span>
-                  <textarea class="form-control" aria-label="With textarea" rows="4" style="resize:none;"></textarea>
+                  <textarea class="form-control" aria-label="With textarea" rows="4" style="resize:none;" id="contCultura" onkeypress="validacioncaracteresCultura();" onkeydown="validacioncaracteresCultura();"></textarea>
                 </div>
-                <small class="text-muted">Cantidad de caracteres: <span id="contador"></span></small>
+                <small class="text-muted">Cantidad de caracteres: <span id="contador_cultura"></span></small>
               </div>
             </div>
           </div>
@@ -260,9 +260,9 @@
               <div class="col-sm-12">
                 <div class="input-group">
                   <span class="input-group-text">Propuesta</span>
-                  <textarea class="form-control" aria-label="With textarea" rows="4" style="resize:none;"></textarea>
+                  <textarea class="form-control" aria-label="With textarea" rows="4" style="resize:none;" id="contParticipacion" onkeypress="validacioncaracteresParticipacion();" onkeydown="validacioncaracteresParticipacion();"></textarea>
                 </div>
-                <small class="text-muted">Cantidad de caracteres: <span id="contador"></span></small>
+                <small class="text-muted">Cantidad de caracteres: <span id="contador_participacion"></span></small>
               </div>
             </div>
           </div>
@@ -274,9 +274,9 @@
               <div class="col-sm-12">
                 <div class="input-group">
                   <span class="input-group-text">Propuesta</span>
-                  <textarea class="form-control" aria-label="With textarea" rows="4" style="resize:none;"></textarea>
+                  <textarea class="form-control" aria-label="With textarea" rows="4" style="resize:none;" id="contMAmbiente" onkeypress="validacioncaracteresMAmbiente();" onkeydown="validacioncaracteresMAmbiente();"></textarea>
                 </div>
-                <small class="text-muted">Cantidad de caracteres: <span id="contador"></span></small>
+                <small class="text-muted">Cantidad de caracteres: <span id="contador_mambiente"></span></small>
               </div>
             </div>
           </div>
@@ -288,9 +288,9 @@
               <div class="col-sm-12">
                 <div class="input-group">
                   <span class="input-group-text">Propuesta</span>
-                  <textarea class="form-control" aria-label="With textarea" rows="4" style="resize:none;"></textarea>
+                  <textarea class="form-control" aria-label="With textarea" rows="4" style="resize:none;" id="contInclusion" onkeypress="validacioncaracteresInclusion();" onkeydown="validacioncaracteresInclusion();"></textarea>
                 </div>
-                <small class="text-muted">Cantidad de caracteres: <span id="contador"></span></small>
+                <small class="text-muted">Cantidad de caracteres: <span id="contador_inclusion"></span></small>
               </div>
             </div>
           </div>
@@ -302,9 +302,9 @@
               <div class="col-sm-12">
                 <div class="input-group">
                   <span class="input-group-text">Propuesta</span>
-                  <textarea class="form-control" aria-label="With textarea" rows="4" style="resize:none;"></textarea>
+                  <textarea class="form-control" aria-label="With textarea" rows="4" style="resize:none;" id="contEmprendimiento" onkeypress="validacioncaracteresEmprendimiento();" onkeydown="validacioncaracteresEmprendimiento();"></textarea>
                 </div>
-                <small class="text-muted">Cantidad de caracteres: <span id="contador"></span></small>
+                <small class="text-muted">Cantidad de caracteres: <span id="contador_emprendimiento"></span></small>
               </div>
             </div>
           </div>

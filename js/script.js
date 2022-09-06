@@ -1,25 +1,8 @@
 // validar 300 caracteres
 
-// var Max_Length = 10;
-// var length = $("#validacionCaracteres").val().length;
-// if (length > Max_Length) {
-//   $("#validacionCaracteres").after("<p style='color:red'>the max length of "+Max_Length + " characters is reached, you typed in  " + length + "characters</p>");
-// }
-
-// function validacionCaracteres(){
-//     var MaxLength = 10;
-//     var caracteres = document.getElementById("contEducacion").value.length;
-//     alert("contEducacion");
-//     if(MaxLength > caracteres){
-//         document.getElementById("caracteresMed").innerHTML="the max length of "+Max_Length + " characters is reached, you typed in  " + length + "characters";
-//     }
-// }
-
+//educación
 function validacioncaracteres(){
-    // var strLength = obj.value.length;
-    // var maxLength = obj.dataset.max;
-    // var charRemain = (maxLength - strLength);
-    var maxTamano = 30;
+    var maxTamano = 300;
     var texto = document.getElementById("contEducacion").value;
     
     var text = texto.length;
@@ -31,42 +14,90 @@ function validacioncaracteres(){
         document.getElementById("caracteresMed").innerHTML = charRemain+' restantes';
     }
 }
-
-// $('#mensaje_ayuda').text('20 carácteres restantes');
-//   $('#validacionCaracteres').keydown(function () {
-//       var max = 20;
-//       var len = $(this).val().length;
-//       if (len >= max) {
-//           $('#mensaje_ayuda').text('Has llegado al límite');// Aquí enviamos el mensaje a mostrar          
-//           $('#mensaje_ayuda').addClass('text-danger');
-//           $('#validacionCaracteres').addClass('is-invalid');
-//           $('#inputsubmit').addClass('disabled');    
-//           document.getElementById('inputsubmit').disabled = true;                    
-//       } 
-//       else {
-//           var ch = max - len;
-//           $('#mensaje_ayuda').text(ch + ' carácteres restantes');
-//           $('#mensaje_ayuda').removeClass('text-danger');            
-//           $('#validacionCaracteres').removeClass('is-invalid');            
-//           $('#inputsubmit').removeClass('disabled');
-//           document.getElementById('inputsubmit').disabled = false;            
-//       }
-//   });  
-
-
-
-
-// $("#contEducacion").on('input', function() {
-//     var limit = 30;
-//     $("#contEducacion").attr('maxlength', limit);
-//     var init = $(this).val().length;
+//salud
+function validacioncaracteresSalud(){
+    var maxTamano = 300;
+    var texto = document.getElementById("contSalud").value;
     
-//     if(init<limit){
-//       init++;
-//       $('#caracteres').text("Máximo 30 caracteres:" + init); 
-//     }
+    var text = texto.length;
+    var charRemain = (maxTamano - text);
+
+    if(charRemain < 0){
+        document.getElementById("contador_salud").innerHTML = '<span class="text-danger">Has excedido el límite de <strong>'+maxTamano+' caracteres</strong></span>';
+    }else{
+        document.getElementById("contador_salud").innerHTML = charRemain+' restantes';
+    }
+}
+//cultura
+function validacioncaracteresCultura(){
+    var maxTamano = 300;
+    var texto = document.getElementById("contCultura").value;
     
-//   });
+    var text = texto.length;
+    var charRemain = (maxTamano - text);
+
+    if(charRemain < 0){
+        document.getElementById("contador_cultura").innerHTML = '<span class="text-danger">Has excedido el límite de <strong>'+maxTamano+' caracteres</strong></span>';
+    }else{
+        document.getElementById("contador_cultura").innerHTML = charRemain+' restantes';
+    }
+}
+//participación
+function validacioncaracteresParticipacion(){
+    var maxTamano = 300;
+    var texto = document.getElementById("contParticipacion").value;
+    
+    var text = texto.length;
+    var charRemain = (maxTamano - text);
+
+    if(charRemain < 0){
+        document.getElementById("contador_participacion").innerHTML = '<span class="text-danger">Has excedido el límite de <strong>'+maxTamano+' caracteres</strong></span>';
+    }else{
+        document.getElementById("contador_participacion").innerHTML = charRemain+' restantes';
+    }
+}
+//medio ambiente
+function validacioncaracteresMAmbiente(){
+    var maxTamano = 300;
+    var texto = document.getElementById("contMAmbiente").value;
+    
+    var text = texto.length;
+    var charRemain = (maxTamano - text);
+
+    if(charRemain < 0){
+        document.getElementById("contador_mambiente").innerHTML = '<span class="text-danger">Has excedido el límite de <strong>'+maxTamano+' caracteres</strong></span>';
+    }else{
+        document.getElementById("contador_mambiente").innerHTML = charRemain+' restantes';
+    }
+}
+//inclusión
+function validacioncaracteresInclusion(){
+    var maxTamano = 300;
+    var texto = document.getElementById("contInclusion").value;
+    
+    var text = texto.length;
+    var charRemain = (maxTamano - text);
+
+    if(charRemain < 0){
+        document.getElementById("contador_inclusion").innerHTML = '<span class="text-danger">Has excedido el límite de <strong>'+maxTamano+' caracteres</strong></span>';
+    }else{
+        document.getElementById("contador_inclusion").innerHTML = charRemain+' restantes';
+    }
+}
+//emprendimiento
+function validacioncaracteresEmprendimiento(){
+    var maxTamano = 300;
+    var texto = document.getElementById("contEmprendimiento").value;
+    
+    var text = texto.length;
+    var charRemain = (maxTamano - text);
+
+    if(charRemain < 0){
+        document.getElementById("contador_emprendimiento").innerHTML = '<span class="text-danger">Has excedido el límite de <strong>'+maxTamano+' caracteres</strong></span>';
+    }else{
+        document.getElementById("contador_emprendimiento").innerHTML = charRemain+' restantes';
+    }
+}
 
 //   Bloqueo de residencia
 
