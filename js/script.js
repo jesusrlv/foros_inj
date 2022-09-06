@@ -20,14 +20,13 @@ function validacioncaracteres(){
     // var maxLength = obj.dataset.max;
     // var charRemain = (maxLength - strLength);
     var maxTamano = 30;
-
     var texto = document.getElementById("contEducacion").value;
     
-    var text = texto.length
+    var text = texto.length;
     var charRemain = (maxTamano - text);
 
-    if(maxTamano < 0){
-        document.getElementById("caracteresMed").innerHTML = 'Has excedido el límite de '+maxTamano+' caracteres';
+    if(charRemain < 0){
+        document.getElementById("caracteresMed").innerHTML = '<span class="text-danger">Has excedido el límite de <strong>'+maxTamano+' caracteres</strong></span>';
     }else{
         document.getElementById("caracteresMed").innerHTML = charRemain+' restantes';
     }
