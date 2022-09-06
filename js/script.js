@@ -15,13 +15,19 @@
 //     }
 // }
 
-function validacionCaracteres(obj){
-    var strLength = obj.value.length;
-    var maxLength = obj.dataset.max;
-    var charRemain = (maxLength - strLength);
+function validacioncaracteres(){
+    // var strLength = obj.value.length;
+    // var maxLength = obj.dataset.max;
+    // var charRemain = (maxLength - strLength);
+    var maxTamano = 30;
 
-    if(charRemain < 0){
-        document.getElementById("caracteresMed").innerHTML = 'Has excedido el límite de '+maxLength+' caracteres';
+    var texto = document.getElementById("contEducacion").value;
+    
+    var text = texto.length
+    var charRemain = (maxTamano - text);
+
+    if(maxTamano < 0){
+        document.getElementById("caracteresMed").innerHTML = 'Has excedido el límite de '+maxTamano+' caracteres';
     }else{
         document.getElementById("caracteresMed").innerHTML = charRemain+' restantes';
     }

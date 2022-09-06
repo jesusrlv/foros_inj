@@ -9,7 +9,7 @@
     <meta name="generator" content="INJUVENTUD">
     <title>PROGRAMA ESTATAL DE LA JUVENTUD</title>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
 
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/album/">
@@ -215,7 +215,7 @@
               <div class="col-sm-12">
                 <div class="input-group">
                   <span class="input-group-text">Propuesta</span>
-                  <textarea class="form-control" aria-label="With textarea" rows="4" style="resize:none;" id="contEducacion" onkeypress="validacionCaracteres(this)" onkeydown="validacionCaracteres(this);" data-max=30></textarea>
+                  <textarea class="form-control" aria-label="With textarea" rows="4" style="resize:none;" id="contEducacion" onkeypress="validacioncaracteres();" data-max=30></textarea>
                 </div>
                 <small class="text-muted">Cantidad de caracteres: <span id="caracteresMed">30</span></small>
               </div>
@@ -334,7 +334,7 @@
           <img src="assets/brand/img/logo_completo_blanco.png" width="300" alt="">
        
     </p>
-    <p class="text-end text-light"><small><strong>Desarrollo:</strong> INJUVENTUD / Departamento Tecnologías de la información.</small></p>
+    <p class="text-end text-light"><small><strong>Desarrollo:</strong> INJUVENTUD / Departamento Tecnologías de la Información.</small></p>
   </div>
 </footer>
 
