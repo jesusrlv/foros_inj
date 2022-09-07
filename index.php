@@ -109,7 +109,7 @@
   <div class="navbar navbar-dark shadow-sm" style="background-color:#83272b ;">
     <div class="container">
       <a href="#" class="navbar-brand d-flex align-items-center">
-        <img src="assets/brand/img/logo_solo_blanco.png" alt="" width="24" height="24" class="d-inline-block align-text-top">
+        <img src="assets/brand/img/logo_solo_blanco.png" alt="" width="24" height="24" class="d-inline-block align-text-top me-2">
         <strong>INJUVENTUD</strong>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
@@ -124,8 +124,8 @@
   <section class="py-5 text-center container">
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
-        <p class="text-center"><img src="assets/brand/img/logo2.png" width="400" alt=""></p>
-        <h1 class="fw-light" style="color:#5a5557;"><strong>PROGRAMA ESTATAL DE LA JUVENTUD</strong></h1>
+        <p class="text-center"><img src="assets/brand/img/logo2.png" width="400" id="imagenLogo" alt=""></p>
+        <h1 class="fw-light" style="color:#5a5557;" id="textoTitulo"><strong>PROGRAMA ESTATAL DE LA JUVENTUD</strong></h1>
       </div>
     </div>
   </section>
@@ -136,7 +136,7 @@
       <main>
           <div class="col-md-12 col-lg-12">
             <h4 class="mb-3">DATOS PERSONALES</h4>
-            <form class="needs-validation" novalidate>
+            <form action="guardarCuestionario.php" method="POST" class="needs-validation">
               <div class="row g-3">
                 <div class="col-sm-6">
                   <label for="firstName" class="form-label">Nombre(s)</label>
@@ -157,8 +157,8 @@
                 <div class="col-sm-6">
                   <label for="firstName" class="form-label">Género</label>
                   
-                  <select class="form-select" aria-label="Default select example">
-                    <option selected>Seleccionar ...</option>
+                  <select class="form-select" aria-label="Default select example" required>
+                    <option value="">Seleccionar ...</option>
                     <option value="Hombre">Hombre</option>
                     <option value="Mujer">Mujer</option>
                   </select>
@@ -174,13 +174,12 @@
 
                 <div class="col-sm-6">
                   <label for="firstName" class="form-label">Municipio</label>
-                  
-                  <select class="form-select" aria-label="Default select example" id="municipio">
-                    <option selected>Selecciona ...</option>
+                  <select class="form-select" aria-label="Default select example" id="municipio" required>
+                    <option value="">Selecciona ...</option>
                     <?php
                         include('query/municipio.php');
                         while($row_sqlMun = $resultado_sqlMun->fetch_assoc()){
-                            echo '<option value="'.$row_sqlMun['municipio'].'">'.$row_sqlMun['municipio'].'</option>';
+                          echo '<option value="'.$row_sqlMun['municipio'].'">'.$row_sqlMun['municipio'].'</option>';
                         } 
                     ?>
                   </select>
@@ -207,37 +206,37 @@
                     </div>
                 </div>
              
-          </div>
-          <div class="col-md-12 col-lg-12">
-            <hr class="my-4">
-            <h4 class="mb-3">TEMA: EDUCACIÓN</h4>
-            <div class="row g-3">
-              <div class="col-sm-12">
-                <div class="input-group">
-                  <span class="input-group-text">Propuesta</span>
-                  <textarea class="form-control" aria-label="With textarea" rows="4" style="resize:none;" id="contEducacion" onkeypress="validacioncaracteres();" onkeydown="validacioncaracteres();" data-max=30></textarea>
-                </div>
-                <small class="text-muted">Cantidad de caracteres: <span id="caracteresMed">30</span></small>
               </div>
-            </div>
-          </div>
+              <div class="col-md-12 col-lg-12">
+                <hr class="my-4">
+                <h4 class="mb-3">TEMA: EDUCACIÓN</h4>
+                <div class="row g-3">
+                  <div class="col-sm-12">
+                    <div class="input-group">
+                      <span class="input-group-text">Propuesta</span>
+                      <textarea class="form-control" aria-label="With textarea" rows="4" style="resize:none;" id="contEducacion" onkeypress="validacioncaracteres();" onkeydown="validacioncaracteres();" data-max=30></textarea>
+                    </div>
+                    <small class="text-muted">Cantidad de caracteres: <span id="caracteresMed">300 restantes</span></small>
+                  </div>
+                </div>
+              </div>
 
           
 
-          <div class="col-md-12 col-lg-12">
-            <hr class="my-4">
-            <h4 class="mb-3">TEMA: SALUD Y PREVENCIÓN</h4>
-            <div class="row g-3">
-              <div class="col-sm-12">
-                <div class="input-group">
-                  <span class="input-group-text">Propuesta</span>
-                  <textarea class="form-control" aria-label="With textarea" rows="4" style="resize:none;" id="contSalud" onkeypress="validacioncaracteresSalud();" onkeydown="validacioncaracteresSalud();"></textarea>
-                    
+              <div class="col-md-12 col-lg-12">
+                <hr class="my-4">
+                <h4 class="mb-3">TEMA: SALUD Y PREVENCIÓN</h4>
+                <div class="row g-3">
+                  <div class="col-sm-12">
+                    <div class="input-group">
+                      <span class="input-group-text">Propuesta</span>
+                      <textarea class="form-control" aria-label="With textarea" rows="4" style="resize:none;" id="contSalud" onkeypress="validacioncaracteresSalud();" onkeydown="validacioncaracteresSalud();"></textarea>
+                        
+                    </div>
+                    <small class="text-muted">Cantidad de caracteres: <span id="contador_salud">300 restantes</span></small>
+                  </div>
                 </div>
-                <small class="text-muted">Cantidad de caracteres: <span id="contador_salud"></span></small>
               </div>
-            </div>
-          </div>
 
           <div class="col-md-12 col-lg-12">
             <hr class="my-4">
@@ -248,7 +247,7 @@
                   <span class="input-group-text">Propuesta</span>
                   <textarea class="form-control" aria-label="With textarea" rows="4" style="resize:none;" id="contCultura" onkeypress="validacioncaracteresCultura();" onkeydown="validacioncaracteresCultura();"></textarea>
                 </div>
-                <small class="text-muted">Cantidad de caracteres: <span id="contador_cultura"></span></small>
+                <small class="text-muted">Cantidad de caracteres: <span id="contador_cultura">300 restantes</span></small>
               </div>
             </div>
           </div>
@@ -262,7 +261,7 @@
                   <span class="input-group-text">Propuesta</span>
                   <textarea class="form-control" aria-label="With textarea" rows="4" style="resize:none;" id="contParticipacion" onkeypress="validacioncaracteresParticipacion();" onkeydown="validacioncaracteresParticipacion();"></textarea>
                 </div>
-                <small class="text-muted">Cantidad de caracteres: <span id="contador_participacion"></span></small>
+                <small class="text-muted">Cantidad de caracteres: <span id="contador_participacion">300 restantes</span></small>
               </div>
             </div>
           </div>
@@ -276,7 +275,7 @@
                   <span class="input-group-text">Propuesta</span>
                   <textarea class="form-control" aria-label="With textarea" rows="4" style="resize:none;" id="contMAmbiente" onkeypress="validacioncaracteresMAmbiente();" onkeydown="validacioncaracteresMAmbiente();"></textarea>
                 </div>
-                <small class="text-muted">Cantidad de caracteres: <span id="contador_mambiente"></span></small>
+                <small class="text-muted">Cantidad de caracteres: <span id="contador_mambiente">300 restantes</span></small>
               </div>
             </div>
           </div>
@@ -290,7 +289,7 @@
                   <span class="input-group-text">Propuesta</span>
                   <textarea class="form-control" aria-label="With textarea" rows="4" style="resize:none;" id="contInclusion" onkeypress="validacioncaracteresInclusion();" onkeydown="validacioncaracteresInclusion();"></textarea>
                 </div>
-                <small class="text-muted">Cantidad de caracteres: <span id="contador_inclusion"></span></small>
+                <small class="text-muted">Cantidad de caracteres: <span id="contador_inclusion">300 restantes</span></small>
               </div>
             </div>
           </div>
@@ -304,7 +303,7 @@
                   <span class="input-group-text">Propuesta</span>
                   <textarea class="form-control" aria-label="With textarea" rows="4" style="resize:none;" id="contEmprendimiento" onkeypress="validacioncaracteresEmprendimiento();" onkeydown="validacioncaracteresEmprendimiento();"></textarea>
                 </div>
-                <small class="text-muted">Cantidad de caracteres: <span id="contador_emprendimiento"></span></small>
+                <small class="text-muted">Cantidad de caracteres: <span id="contador_emprendimiento">300 restantes</span></small>
               </div>
             </div>
           </div>
