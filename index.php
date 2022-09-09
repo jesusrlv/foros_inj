@@ -136,11 +136,11 @@
       <main>
           <div class="col-md-12 col-lg-12">
             <h4 class="mb-3">DATOS PERSONALES</h4>
-            <form action="guardarCuestionario.php" method="POST" class="needs-validation">
+            <form action="prcd/save.php" method="POST" class="needs-validation">
               <div class="row g-3">
                 <div class="col-sm-6">
                   <label for="firstName" class="form-label">Nombre(s)</label>
-                  <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                  <input type="text" class="form-control" id="firstName" placeholder="" value="" name="nombre" required>
                   <div class="invalid-feedback">
                     Valid first name is required.
                   </div>
@@ -148,7 +148,7 @@
     
                 <div class="col-sm-6">
                   <label for="lastName" class="form-label">Apellidos</label>
-                  <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                  <input type="text" class="form-control" id="lastName" placeholder="" value="" name="apellido" required>
                   <div class="invalid-feedback">
                     Valid last name is required.
                   </div>
@@ -157,7 +157,7 @@
                 <div class="col-sm-6">
                   <label for="firstName" class="form-label">Género</label>
                   
-                  <select class="form-select" aria-label="Default select example" required>
+                  <select class="form-select" aria-label="Default select example" name="genero" required>
                     <option value="">Seleccionar ...</option>
                     <option value="Hombre">Hombre</option>
                     <option value="Mujer">Mujer</option>
@@ -166,7 +166,7 @@
     
                 <div class="col-sm-6">
                   <label for="lastName" class="form-label">Edad</label>
-                  <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                  <input type="text" class="form-control" id="lastName" placeholder="" value="" name="edad" required>
                   <div class="invalid-feedback">
                     Valid last name is required.
                   </div>
@@ -174,7 +174,7 @@
 
                 <div class="col-sm-6">
                   <label for="firstName" class="form-label">Municipio</label>
-                  <select class="form-select" aria-label="Default select example" id="municipio" required>
+                  <select class="form-select" aria-label="Default select example" id="municipio" name="procedencia" required>
                     <option value="">Selecciona ...</option>
                     <?php
                         include('query/municipio.php');
@@ -187,7 +187,7 @@
     
                 <div class="col-sm-6">
                   <label for="lastName" class="form-label">Correo electrónico</label>
-                  <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                  <input type="text" class="form-control" id="lastName" placeholder="" value="" name="email" required>
                   <div class="invalid-feedback">
                     Valid last name is required.
                   </div>
@@ -214,7 +214,7 @@
                   <div class="col-sm-12">
                     <div class="input-group">
                       <span class="input-group-text">Propuesta</span>
-                      <textarea class="form-control" aria-label="With textarea" rows="4" style="resize:none;" id="contEducacion" onkeypress="validacioncaracteres();" onkeydown="validacioncaracteres();" data-max=30></textarea>
+                      <textarea class="form-control" aria-label="With textarea" rows="4" name="tema1" style="resize:none;" id="contEducacion" onkeypress="validacioncaracteres();" onkeydown="validacioncaracteres();" data-max=30></textarea>
                     </div>
                     <small class="text-muted">Cantidad de caracteres: <span id="caracteresMed">300 restantes</span></small>
                   </div>
@@ -230,7 +230,7 @@
                   <div class="col-sm-12">
                     <div class="input-group">
                       <span class="input-group-text">Propuesta</span>
-                      <textarea class="form-control" aria-label="With textarea" rows="4" style="resize:none;" id="contSalud" onkeypress="validacioncaracteresSalud();" onkeydown="validacioncaracteresSalud();"></textarea>
+                      <textarea class="form-control" aria-label="With textarea" rows="4" name="tema2" style="resize:none;" id="contSalud" onkeypress="validacioncaracteresSalud();" onkeydown="validacioncaracteresSalud();"></textarea>
                         
                     </div>
                     <small class="text-muted">Cantidad de caracteres: <span id="contador_salud">300 restantes</span></small>
@@ -245,7 +245,7 @@
               <div class="col-sm-12">
                 <div class="input-group">
                   <span class="input-group-text">Propuesta</span>
-                  <textarea class="form-control" aria-label="With textarea" rows="4" style="resize:none;" id="contCultura" onkeypress="validacioncaracteresCultura();" onkeydown="validacioncaracteresCultura();"></textarea>
+                  <textarea class="form-control" aria-label="With textarea" rows="4" name="tema3" style="resize:none;" id="contCultura" onkeypress="validacioncaracteresCultura();" onkeydown="validacioncaracteresCultura();"></textarea>
                 </div>
                 <small class="text-muted">Cantidad de caracteres: <span id="contador_cultura">300 restantes</span></small>
               </div>
@@ -259,7 +259,7 @@
               <div class="col-sm-12">
                 <div class="input-group">
                   <span class="input-group-text">Propuesta</span>
-                  <textarea class="form-control" aria-label="With textarea" rows="4" style="resize:none;" id="contParticipacion" onkeypress="validacioncaracteresParticipacion();" onkeydown="validacioncaracteresParticipacion();"></textarea>
+                  <textarea class="form-control" aria-label="With textarea" rows="4" name="tema4" style="resize:none;" id="contParticipacion" onkeypress="validacioncaracteresParticipacion();" onkeydown="validacioncaracteresParticipacion();"></textarea>
                 </div>
                 <small class="text-muted">Cantidad de caracteres: <span id="contador_participacion">300 restantes</span></small>
               </div>
@@ -273,7 +273,7 @@
               <div class="col-sm-12">
                 <div class="input-group">
                   <span class="input-group-text">Propuesta</span>
-                  <textarea class="form-control" aria-label="With textarea" rows="4" style="resize:none;" id="contMAmbiente" onkeypress="validacioncaracteresMAmbiente();" onkeydown="validacioncaracteresMAmbiente();"></textarea>
+                  <textarea class="form-control" aria-label="With textarea" rows="4" name="tema5" style="resize:none;" id="contMAmbiente" onkeypress="validacioncaracteresMAmbiente();" onkeydown="validacioncaracteresMAmbiente();"></textarea>
                 </div>
                 <small class="text-muted">Cantidad de caracteres: <span id="contador_mambiente">300 restantes</span></small>
               </div>
@@ -287,7 +287,7 @@
               <div class="col-sm-12">
                 <div class="input-group">
                   <span class="input-group-text">Propuesta</span>
-                  <textarea class="form-control" aria-label="With textarea" rows="4" style="resize:none;" id="contInclusion" onkeypress="validacioncaracteresInclusion();" onkeydown="validacioncaracteresInclusion();"></textarea>
+                  <textarea class="form-control" aria-label="With textarea" rows="4" name="tema6" style="resize:none;" id="contInclusion" onkeypress="validacioncaracteresInclusion();" onkeydown="validacioncaracteresInclusion();"></textarea>
                 </div>
                 <small class="text-muted">Cantidad de caracteres: <span id="contador_inclusion">300 restantes</span></small>
               </div>
@@ -301,7 +301,7 @@
               <div class="col-sm-12">
                 <div class="input-group">
                   <span class="input-group-text">Propuesta</span>
-                  <textarea class="form-control" aria-label="With textarea" rows="4" style="resize:none;" id="contEmprendimiento" onkeypress="validacioncaracteresEmprendimiento();" onkeydown="validacioncaracteresEmprendimiento();"></textarea>
+                  <textarea class="form-control" aria-label="With textarea" rows="4" name="tema7" style="resize:none;" id="contEmprendimiento" onkeypress="validacioncaracteresEmprendimiento();" onkeydown="validacioncaracteresEmprendimiento();"></textarea>
                 </div>
                 <small class="text-muted">Cantidad de caracteres: <span id="contador_emprendimiento">300 restantes</span></small>
               </div>
