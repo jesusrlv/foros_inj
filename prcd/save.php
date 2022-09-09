@@ -23,10 +23,9 @@
 
     date_default_timezone_set('America/Mexico_City');
     setlocale(LC_TIME, 'es_MX.UTF-8');
-
     $fecha = strftime("%Y-%m-%d,%H:%M:%S");
 
-    $sqlSave = "INSERT INTO dato_programa(nombre,apellido,genero,edad,procedencia,email,tema1,tema2,tema3,tema4,tema5,tema6,tema7,fechahora) VALUES('$nombre','$apellido'.'$genero','$edad','$procedencia','$email','$tema1','$tema2','$tema3','$tema4','$tema5','$tema6','$tema7','$fecha')";
+    $sqlSave = "INSERT INTO dato_programa(nombre,apellido,genero,edad,procedencia,email,tema1,tema2,tema3,tema4,tema5,tema6,tema7,fechahora) VALUES('$nombre','$apellido','$genero','$edad','$procedencia','$email','$tema1','$tema2','$tema3','$tema4','$tema5','$tema6','$tema7','$fecha')";
     $resultadoSave = $conn->query($sqlSave);
 
     if($resultadoSave){
