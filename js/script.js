@@ -120,3 +120,22 @@ function validacioncaracteresEmprendimiento(){
 
     }
   }
+
+  function validarSubmit(){
+    var texto1 = document.getElementById("contEducacion").value;
+    var texto2 = document.getElementById("contSalud").value;
+    var texto3 = document.getElementById("contCultura").value;
+    var texto4 = document.getElementById("contParticipacion").value;
+    var texto5 = document.getElementById("contMAmbiente").value;
+    var texto6 = document.getElementById("contInclusion").value;
+    var texto7 = document.getElementById("contEmprendimiento").value;
+
+    var sumaSubmit = texto1 + texto2 + texto3 + texto4 + texto5 + texto6 + texto7;
+
+    if (sumaSubmit = 0){
+        document.getElementById("buttonSubmit").required = true;
+    }
+    else{
+        document.getElementById("buttonSubmit").required = false;
+    }
+  }

@@ -311,7 +311,7 @@
           <div class="col-md-12 col-lg-12">
             <hr class="my-4">
     
-            <button class="w-100 btn btn-primary btn-lg" type="submit">Enviar propuesta</button>
+            <button class="w-100 btn btn-primary btn-lg" type="submit" id="buttonSubmit" disabled>Enviar propuesta</button>
           </form>
           </div>
 
