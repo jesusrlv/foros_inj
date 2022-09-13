@@ -84,7 +84,7 @@
 
     
   </head>
-  <body>
+  <body onload="validarSubmit2()" oninput="validarSubmit()">
     
 <header>
   <div class="collapse" id="navbarHeader" style="background-color:#83272b ;">
@@ -372,5 +372,25 @@
         <button type="button" class="btn btn-primary">Acceso</button>
       </div>
     </div>
+  </div>
+</div>
+
+<!-- modal video -->
+
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-primary"><i class="bi bi-exclamation-triangle-fill"></i> Comité de Ética</h5>
+      </div>
+      <div class="modal-body">
+        <p><iframe width="100%" height="500" src="https://www.youtube.com/embed/DLWWwP4UfDg?controls=0&rel=0&amp;autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="modal-footer">
+      <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+
   </div>
 </div>

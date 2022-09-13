@@ -132,10 +132,21 @@ function validacioncaracteresEmprendimiento(){
 
     var sumaSubmit = texto1 + texto2 + texto3 + texto4 + texto5 + texto6 + texto7;
 
-    if (sumaSubmit = 0){
-        document.getElementById("buttonSubmit").required = true;
+    if (sumaSubmit == ""){
+        document.getElementById("buttonSubmit").disabled = true;
+        console.log(sumaSubmit);
+        // alert(sumaSubmit);
     }
     else{
-        document.getElementById("buttonSubmit").required = false;
+        document.getElementById("buttonSubmit").disabled = false;
+        console.log('Válido');
+        // alert(sumaSubmit);
     }
   }
+
+//   video on load
+
+$(function validarSubmit2() {
+    $('#myModal').modal('show');
+});
+
