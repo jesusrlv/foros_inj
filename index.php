@@ -84,7 +84,7 @@
 
     
   </head>
-  <body onload="validarSubmit2()" oninput="validarSubmit()">
+  <body onload="validarSubmit2(); changePicture()" oninput="validarSubmit()">
     
 <header>
   <div class="collapse" id="navbarHeader" style="background-color:#83272b ;">
@@ -120,15 +120,16 @@
 </header>
 
 <main>
-
+<div id="back">
   <section class="py-5 text-center container">
     <div class="row py-lg-5">
-      <div class="col-lg-6 col-md-8 mx-auto">
+      <div class="col-lg-6 col-md-8 mx-auto" id="backTexto">
         <p class="text-center"><img src="assets/brand/img/logo2.png" width="400" id="imagenLogo" alt=""></p>
-        <h1 class="fw-light" style="color:#5a5557;" id="textoTitulo"><strong>PROGRAMA ESTATAL DE LA JUVENTUD</strong></h1>
+        <h1 class="fw-light" id="textoTitulo"><strong>PROGRAMA ESTATAL DE LA JUVENTUD</strong></h1>
       </div>
     </div>
   </section>
+</div>
 
   <div class="album py-5 bg-light">
     <div class="container">
@@ -382,7 +383,7 @@
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title text-primary"><i class="bi bi-exclamation-triangle-fill"></i> Comité de Ética</h5>
+        <h5 class="modal-title text-secondary text-center"> FORO LEY ESTATAL DE LA JUVENTUD</h5>
       </div>
       <div class="modal-body">
         <p><iframe width="100%" height="500" src="https://www.youtube.com/embed/DLWWwP4UfDg?controls=0&rel=0&amp;autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

@@ -150,3 +150,25 @@ $(function validarSubmit2() {
     $('#myModal').modal('show');
 });
 
+// transiciones
+
+var i = 0;
+var images = [];
+var slideTime = 3000; // 3 seconds
+
+images[0] = 'assets/brand/img/jovenes/jov_01.jpeg';
+images[1] = 'assets/brand/img/jovenes/jov_02.jpeg';
+images[2] = 'assets/brand/img/jovenes/jov_03.jpeg';
+
+function changePicture() {
+    document.getElementById("back").style.backgroundImage = "url(" + images[i] + ")";
+
+    if (i < images.length - 1) {
+        i++;
+    } else {
+        i = 0;
+    }
+    setTimeout(changePicture, slideTime);
+}
+
+window.onload = changePicture;
