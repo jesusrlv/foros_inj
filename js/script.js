@@ -107,15 +107,23 @@ function validacioncaracteresEmprendimiento(){
     if(checkBox.checked == true){
         document.getElementById("extranjero").disabled = false;
         document.getElementById("extranjero").required = true;
+        document.getElementById("extranjero").setAttribute("name","procedencia");
+
+
         document.getElementById("municipio").disabled = true;
         document.getElementById("municipio").required = false;
+        document.getElementById("municipio").removeAttribute("name");
 
     }
     else if(checkBox.checked == false){
         document.getElementById("extranjero").disabled = true;
         document.getElementById("extranjero").required = false;
+        document.getElementById("extranjero").removeAttribute("name");
+
         document.getElementById("municipio").disabled = false;
         document.getElementById("municipio").required = true;
+        document.getElementById("municipio").setAttribute("name","procedencia");
+
 
 
     }
