@@ -5,6 +5,12 @@
 <body>
 
 <?php
+if(isset($_POST['nombre']) && isset($_POST['apellido'])){
+    
+}
+else{
+    header('Location: ../index.php');
+}
     require('../query/qconn.php'); 
 
     $nombre = $_POST['nombre'];
@@ -35,7 +41,8 @@
             icon: "success",
             title: "Registro correcto",
             footer: "Programa INJUVENTUD"
-        }).then(function(){window.location="../../index.php";});
+        }).then(function(){window.location="../index.php";});
+        window.open("reconocimiento.php?nombre=..'.$nombre.'&apellido='.$apellido.'", "_blank");
         </script>';
         }
         else{

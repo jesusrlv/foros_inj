@@ -137,7 +137,7 @@
       <main>
           <div class="col-md-12 col-lg-12">
             <h4 class="mb-3">DATOS PERSONALES</h4>
-            <form action="prcd/save.php" method="POST" class="needs-validation">
+            <form action="prcd/save.php" method="POST" class="needs-validation" name="submit">
               <div class="row g-3">
                 <div class="col-sm-6">
                   <label for="firstName" class="form-label">Nombre(s)</label>
