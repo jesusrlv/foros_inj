@@ -180,7 +180,7 @@
                     <?php
                         include('query/municipio.php');
                         while($row_sqlMun = $resultado_sqlMun->fetch_assoc()){
-                          echo '<option value="'.$row_sqlMun['municipio'].'">'.$row_sqlMun['municipio'].'</option>';
+                          echo '<option value="'.utf8_decode($row_sqlMun['municipio']).'">'.utf8_decode($row_sqlMun['municipio']).'</option>';
                         } 
                     ?>
                   </select>
