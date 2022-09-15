@@ -144,13 +144,14 @@
             ?>
             
             <div class="card">
-                <h5 class="card-header"><strong>Municipio: </strong><?php echo $mpio ?></h5>
+                <h5 class="card-header bg-dark text-light"><strong>Municipio: </strong><?php echo $mpio ?></h5>
                 <div class="card-body">
                     <h5 class="card-title"><strong>Número de personas participantes: </strong><?php echo $rowCardParticipantes['datoParticipantes'] ?></h5>
+                    <hr>
                     <p class="card-text">Edad</p>
 
                     <table class="table">
-                        <thead  class="text-center">
+                        <thead class="text-center bg-secondary text-light">
                             <tr>
                             <th scope="col">#</th>
                             <th scope="col">Edad</th>
@@ -173,67 +174,124 @@
                             ?>
                         </tbody>
                     </table>
-                    <p class="card-text">Género:</p>
+                    <p class="card-text">Género</p>
                     <table class="table">
-                        <thead>
+                        <thead class="text-center bg-secondary text-light">
                             <tr>
                             <th scope="col">#</th>
                             <th scope="col">Genero</th>
                             <th scope="col">Cantidad</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                            <th scope="row">1</th>
-                            <td>Hombres</td>
-                            <td>3</td>
+                        <tbody class="text-center">
+                        <?php
+                            $x = 0;
+                            while($rowCardGenero = $resultadoCardGenero->fetch_assoc()){
+                            $x++;
+                            echo'
+                            <tr class="text-center">
+                                <td>'.$x.'</td>
+                                <td>'.$rowCardGenero['genero'].'</td>
+                                <td>'.$rowCardGenero['cantidadGenero'].'</td>
                             </tr>
-                            <tr>
-                            <th scope="row">2</th>
-                            <td>Mujeres</td>
-                            <td>4
-                            
+                            ';
+                            }
+                            ?>
                         </tbody>
                     </table>
                     <p class="card-text">Categorías:</p>
                     <table class="table">
-                        <thead>
+                        <thead class=" bg-secondary text-light">
                             <tr>
-                            <th scope="col">#</th>
+                            <th class="text-center" scope="col">#</th>
                             <th scope="col">Categoría</th>
-                            <th scope="col">Cantidad</th>
+                            <th scope="col" class="text-center">Cantidad</th>
                             </tr>
                         </thead>
                         <tbody>
+
+                        <?php
+                           
+                            $tema1 = 0;
+                            $tema2 = 0;
+                            $tema3 = 0;
+                            $tema4 = 0;
+                            $tema5 = 0;
+                            $tema6 = 0;
+                            $tema7 = 0;
+                            while($rowCardCategorias = $resultadoCardCategorias->fetch_assoc()){
+                          
+                                if(!empty($rowCardCategorias['tema1'])){
+                                    $tema1++;
+                                }
+                                
+                               
+                                if(!empty($rowCardCategorias['tema2'])){
+                                    $tema2++;
+                                }
+                               
+                    
+                                if(!empty($rowCardCategorias['tema3'])){
+                                    $tema3++;
+                                }
+                                
+                                if(!empty($rowCardCategorias['tema4'])){
+                                    $tema4++;
+                                }
+                                
+                                if(!empty($rowCardCategorias['tema5'])){
+                                    $tema5++;
+                                }
+                                
+                                if(!empty($rowCardCategorias['tema6'])){
+                                    $tema6++;
+                                }
+                                
+                                if(!empty($rowCardCategorias['tema7'])){
+                                    $tema7++;
+                                }
+                                
+                            }
+                            ?>
                             <tr>
-                                <th scope="row">1</th>
+                                <td class="text-center">1</td>
+                                <td>Educación</td>
+                                <td class="text-center"><?php echo $tema1 ?></td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">2</td>
                                 <td>Salud y prevención</td>
-                                <td>5</td>
+                                <td class="text-center"><?php echo $tema2 ?></td>
                             </tr>
                             <tr>
-                                <th scope="row">2</th>
+                                <td class="text-center">3</td>
                                 <td>Cultura, turismo y deporte</td>
-                                <td>5</td>
+                                <td class="text-center"><?php echo $tema3 ?></td>
                             </tr>
                             <tr>
-                                <th scope="row">3</th>
+                                <td class="text-center">4</td>
                                 <td>Participación juvenil</td>
-                                <td>5</td>
+                                <td class="text-center"><?php echo $tema4 ?></td>
                             </tr>
                             <tr>
-                                <th scope="row">4</th>
+                                <td class="text-center">5</td>
                                 <td>Medio ambiente</td>
-                                <td>5</td>
+                                <td class="text-center"><?php echo $tema5 ?></td>
                             </tr>
                             <tr>
-                                <th scope="row">5</th>
+                                <td class="text-center">6</td>
                                 <td>Inclusión</td>
-                                <td>5</td>
+                                <td class="text-center"><?php echo $tema6 ?></td>
                             </tr>
                             <tr>
-                                <th scope="row">6</th>
+                                <td class="text-center">7</td>
                                 <td>Empleo - Emprendimiento</td>
-                                <td>5</td>
+                                <td class="text-center"><?php echo $tema7 ?></td>
+                            </tr>
+                            <tr class="bg-warning">
+                                <!-- <td></td> -->
+                                <td colspan="2" class="text-center"><strong>TOTAL</strong></td>
+                                <td class="text-center"><strong><?php echo $total = $tema1+$tema2+$tema3+$tema4+$tema5+$tema6+$tema7 ?></strong></td>
                             </tr>
                             
                         </tbody>
