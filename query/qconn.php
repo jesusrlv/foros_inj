@@ -1,11 +1,10 @@
 <?php
 
     $servername="localhost";
-    $database="programa_inj"; //solo se quitó para conexión remota
+    $database="foros_inj"; //solo se quitó para conexión remota
     $username="root";
     $password="";
 
     $conn= new mysqli ($servername,$username,$password,$database); //solo se quitó para conexión remota
-    mysql_query("SET NAMES 'utf8'");
-
+    $conn->set_charset("utf8");
 ?>
