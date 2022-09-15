@@ -48,7 +48,19 @@ $pdf->Image('../img/fondo_pej2022.png','0','0','250','300','PNG');
 $pdf->SetFont('Arial','B',10);
 $pdf->Multicell(190,8,utf8_decode('
 
-CONSTANCIA DE PARTICIPACIÓN'),0,'C',0);
+El Gobierno del Estado a través del Instituto de la Juventud del Estado de Zacatecas
+
+Otorga la presente 
+
+'),0,'C',0);
+$pdf->Multicell(190,8,utf8_decode('
+CONSTANCIA
+'),0,'C',0);
+$pdf->Multicell(190,8,utf8_decode('
+a:
+
+'.$nombre.'
+'),0,'C',0);
 $pdf->SetFont('Arial','B',10);
 $pdf->Cell(0,12,'Estimado(a) participante, '.$nombre.' ',0,1);
 $pdf->SetFont('Arial','',10);

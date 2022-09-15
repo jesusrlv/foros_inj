@@ -33,7 +33,7 @@ function Footer()
     // Arial italic 8
     $this->SetFont('Arial','I',8);
     // Número de página
-    $this->Cell(0,10,utf8_decode('Página ').$this->PageNo().'/{nb}',0,0,'C');
+    // $this->Cell(0,10,utf8_decode('Página ').$this->PageNo().'/{nb}',0,0,'C');
 }
 }
 
@@ -43,22 +43,38 @@ $pdf->AliasNbPages();
 $pdf->AddPage();
 $pdf->Image('fondo_pej2022.png','0','0','250','300','PNG');
 // $pdf->MultiCell(190,9, $pdf->Image("../img/logos_pej2022.png", $pdf->GetX()+5, $pdf->GetY()+3, 180) ,0,"C");
-$pdf->SetFont('Arial','B',10);
+$pdf->SetFont('Arial','B',12);
 $pdf->Multicell(190,8,utf8_decode('
 
-CONSTANCIA DE PARTICIPACIÓN'),0,'C',0);
+
+El Gobierno del Estado a través del Instituto de la Juventud del Estado de Zacatecas'),0,'C',0);
+$pdf->Multicell(190,8,utf8_decode('
+Otorga la presente 
+'),0,'C',0);
+$pdf->SetFont('Arial','B',21);
+$pdf->SetTextColor(131,39,43); 
+$pdf->Multicell(190,8,utf8_decode('
+C O N S T A N C I A'),0,'C',0);
+$pdf->SetFont('Arial','B',12);
+$pdf->SetTextColor(0,0,0); 
+$pdf->Multicell(190,8,utf8_decode('a:
+'.$nombre.' '.$apellido.'
+
+'),0,'C',0);
 $pdf->SetFont('Arial','B',10);
-$pdf->Cell(0,12,'Estimado(a) participante, '.utf8_decode($nombre).' '.utf8_decode($apellido).'  ',0,1);
+// $pdf->Cell(0,12,'Estimado(a) participante, '.utf8_decode($nombre).' '.utf8_decode($apellido).'  ',0,1);
 $pdf->SetFont('Arial','',10);
-$pdf->Multicell(190,9,utf8_decode('Por medio de la presente, el Instituto de la Juventud del Estado de Zacatecas, a través de su Director General, el Ing. Mauricio Acevedo Rodríguez, reconoce a usted su participación como candidato(a) a recibir el Premio Estatal de la Juventud en su edición 2022.
+$pdf->Multicell(190,9,utf8_decode('Por su destacada participación en la Consulta Juvenil 2022 << Zacatecas te escucha >>, espacio que permitió a las juventudes del Estado, mediante un proceso incluyente e igualitario, escuchar, opinar y aportar vías de solución a las problemáticas prioritarias que afectan su entorno, para la construcción del Programa Estatal de Juventud.
 
-Su postulación es fundamental para la construcción de un Estado más próspero, incluyente, democrático e igualitario. Gracias a su intervención, recordamos lo importante que es reconocer el talento y la trayectoria de las y los jóvenes en nuestra Entidad. Los principios rectores de la Nueva Gobernanza, nos obligan a impulsar y generar los espacios oportunos para que las juventudes puedan alcanzar sus objetivos, desarrollarse de manera integral y vivir en bienestar. No sólo representas uno de los cimientos más importantes de la sociedad, también eres protagonista del presente y agente estratégico para la transformación nacional.
+¡Nunca más un Zacatecas sin sus juventudes!
 
-Continúa abriendo brechas, rompiendo estigmas y creciendo, ¡Tú talento y capacidades, no tienen límites!
 
-'),0,'J',0);
+'),0,'C',0);
 $pdf->SetFont('Arial','I',10);
-$pdf->Multicell(190,9,'En la ciudad de Zacatecas, Zac., noviembre de 2022.',0,'C',0);
+$pdf->Multicell(190,9,utf8_decode('Lo mejor de esta tierra eres tú'),0,'C',0);
+
+$pdf->SetFont('Arial','I',10);
+$pdf->Multicell(190,9,'En la ciudad de Zacatecas, Zac., septiembre de 2022.',0,'C',0);
 $pdf->MultiCell(190,9, $pdf->Image("rubrica.png", $pdf->GetX()+20, $pdf->GetY()+1, 150) ,0,"C",0);
 //IMAGE (RUTA,X,Y,ANCHO,ALTO,EXTEN)
 $pdf->Ln();
