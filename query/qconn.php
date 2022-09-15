@@ -1,7 +1,7 @@
 <?php
 
     $servername="localhost";
-    $database="foros_inj"; //solo se quitó para conexión remota
+    $database="programa_inj"; //solo se quitó para conexión remota
     $username="root";
     $password="";
 

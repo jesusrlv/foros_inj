@@ -386,7 +386,8 @@
         <h5 class="modal-title text-secondary text-center"> FORO LEY ESTATAL DE LA JUVENTUD</h5>
       </div>
       <div class="modal-body">
-        <p><iframe width="100%" height="500" src="https://www.youtube.com/embed/DLWWwP4UfDg?controls=0&rel=0&amp;autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      
+        <p><iframe width="100%" height="500" src="https://www.youtube.com/embed/OQG0wa6htMU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="modal-footer">
       <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
