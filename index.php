@@ -366,7 +366,7 @@
         </div>
         <div class="input-group mb-3">
             <span class="input-group-text" id="basic-addon1"><i class="bi bi-question-circle"></i>  </span>
-            <input type="text" class="form-control" placeholder="Contraseña" aria-label="Contraseña" aria-describedby="basic-addon1" name="pwd" required>
+            <input type="password" class="form-control" placeholder="Contraseña" aria-label="Contraseña" aria-describedby="basic-addon1" name="pwd" required>
         </div>
 
       </div>
