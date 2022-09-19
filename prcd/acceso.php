@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include('qc/qc.php');
+include('..query/qconn.php');
 if (isset($_POST['usr']) && isset($_POST['pwd'])) {
    
     $id = $_POST['usr'];
