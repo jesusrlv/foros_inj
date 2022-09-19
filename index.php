@@ -358,6 +358,7 @@
         <h5 class="modal-title" id="exampleModalLabel">Reporte datos</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
+      <form action="prcd/acceso.php" method="POST">
       <div class="modal-body">
         <div class="input-group mb-3">
             <span class="input-group-text" id="basic-addon1"><i class="bi bi-person-circle"></i></span>
@@ -372,6 +373,7 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
         <button type="button" class="btn btn-primary">Acceso</button>
+      </form>
       </div>
     </div>
   </div>
