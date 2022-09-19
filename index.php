@@ -372,7 +372,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary">Acceso</button>
+        <button type="submit" class="btn btn-primary">Acceso</button>
       </form>
       </div>
     </div>
