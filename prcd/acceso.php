@@ -11,9 +11,9 @@ if (isset($_POST['usr']) && isset($_POST['pwd'])) {
     $resultado_sql = $conn->query($sql);
     if($row_sql=mysqli_fetch_array($resultado_sql)){
    
-        $_SESSION['id']=$row_sql['id'];
+        // $_SESSION['id']=$row_sql['id'];
         $_SESSION['usr']=$row_sql['usr'];
-        // $_SESSION['pwd']=$row_sql['pwd'];
+        $_SESSION['pwd']=$row_sql['pwd'];
         $_SESSION['perfil']=$row_sql['perfil'];
 
 if($row_sql['perfil']==1){ //admin 1
