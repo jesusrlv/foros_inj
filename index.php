@@ -162,6 +162,7 @@
                     <option value="">Seleccionar ...</option>
                     <option value="Hombre">Hombre</option>
                     <option value="Mujer">Mujer</option>
+                    <option value="No contestó">Prefiero no contestar</option>
                   </select>
                 </div>
     
