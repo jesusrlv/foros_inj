@@ -2,14 +2,14 @@
 session_start();
 
 if (isset($_SESSION['usr']) && isset($_SESSION['pwd'])) {
-  if($_SESSION['perfil']==1){
+  // if($_SESSION['perfil']==1){
 
-  }
+  // }
  
-  else{
-    header('Location: prcd/sort.php');
-    die();
-  }
+  // else{
+  //   header('Location: prcd/sort.php');
+  //   die();
+  // }
   
 } else {
   // En caso contrario redirigimos el visitante a otra página
